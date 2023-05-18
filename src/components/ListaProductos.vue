@@ -15,7 +15,7 @@
                         <div class="media">
                         <div class="media-content">
                             <p class="title is-4">{{ producto.name }}</p>
-                            <p class="subtitle is-6"></p>
+                            <p class="subtitle is-6" style="color: black;">{{ producto.price }} COP</p>
                         </div>
                         </div>
                         <button class="button is-primary" @click="addItem(producto)">Agregar</button>

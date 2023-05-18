@@ -11,9 +11,10 @@
       </div>
       <div class="media-content">
         <p class="title is-4">{{ producto.name }}</p>
-        <p class="subtitle is-6">@johnsmith</p>
+        <p class="subtitle is-6" style="color: black;">{{ producto.price }} COP</p>
       </div>
     </div>
+    <button class="button is-success" @click="clearItem(producto)">Eliminar</button>
     </div>
   </div>
 </div>
@@ -22,12 +23,18 @@
 <script>
 
     import {useArticulosStore} from '@/stores/ArticulosStore.js'
-    import {mapState} from 'pinia'
+    import {mapState, mapActions} from 'pinia'
 
     export default {
       computed:{
             ...mapState(useArticulosStore, ['getListaArticulos'])
         },
+        methods: {
+            ...mapActions(useArticulosStore, ['clearItem']),
+            ...mapActions(useArticulosStore, ['MantenerItem']),
+        },
+             
+
     }
 </script>
 

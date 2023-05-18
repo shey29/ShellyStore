@@ -16,11 +16,13 @@ export const useArticulosStore = defineStore('articulosStore',{
             this.listaArticulos.push(producto)
             localStorage.setItem('listaArticulos', JSON.stringify(this.getListaArticulos))            
         },
-        clearItem(){
-            this.listaArticulos = []
+        clearItem(producto){
+            const index = this.listaArticulos.indexOf(producto)
+            this.listaArticulos.splice(index, 1)
+
         },
-        //MantenerItem(){
-            //localStorage.setItem ('product', JSON.stringify(this.getListaArticulos))
-        //}
+        MantenerItem(){
+            localStorage.setItem ('producto', JSON.stringify(this.getListaArticulos))
+        }
     }
 })
