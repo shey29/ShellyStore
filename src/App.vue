@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="navbar">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
+      <nav class="navbar" role="navigation" aria-label="main navigation" style="display: contents;">
     <div class="navbar-brand">
     <a class="navbar-item">
       <router-link to="Home"><img src="./assets/imagenes-indumentaria/logo_large.png" width="140" height="30"> 
@@ -18,11 +18,6 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-
-      <a class="navbar-item">
-        Ayuda
-      </a>
-
       <a class="navbar-item">
         <router-link to="/">Tienda</router-link>
       </a>
@@ -48,10 +43,13 @@
           </a>
         </div>
       </div>
-  
+      <a class="navbar-item">
+        <router-link to="/Contactanos">Contactanos</router-link>
+      </a>
       <a class="navbar-item">
         <router-link to="/car" class="icono"><img src="./assets/imagenes-indumentaria/carrito.jpg" alt=""></router-link>
       </a>
+
     </div>
 
     <div class="navbar-end">
@@ -67,19 +65,13 @@
       </div>
     </div>
   </div>
-  <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-      <form class="d-flex" role="search">
-        <input class="input is-primary" type="search" placeholder="Search" aria-label="Search">
-      </form>
-    </div>
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </nav>
+
 </nav>
     </div>
       <router-view/>
     </div>
-  
+    <!-- icono de whatsap -->
+
 </template>
 
 <style lang="scss">
