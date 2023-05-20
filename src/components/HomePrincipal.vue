@@ -1,8 +1,6 @@
 <template>
-    <div >
-        <h1>aqui va la pagina principal</h1>
-    </div>
-    <div>
+ 
+ <div>
         <img src="../assets/imagenes-indumentaria/baner.png" alt="">
     </div>
     <footer class="footer">
@@ -17,11 +15,7 @@
 </template>
 
 <script>
-    
-    export default {
-        name: 'HomePrincipal'
-
-    }
+  
 </script>
 
 <style>

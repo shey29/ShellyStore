@@ -71,7 +71,12 @@
       <router-view/>
     </div>
     <!-- icono de whatsap -->
-
+    <div>
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=+573206042219" class="btn-wsp" target="_blank" >
+      <img src="./assets/imagenes-indumentaria/whatsapp.png" alt="">
+      <i class="icon-whatsapp"></i>
+    </a>
 </template>
 
 <style lang="scss">
@@ -98,5 +103,27 @@ nav {
 
 nav {
   display: flex;
+}
+.btn-wsp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0df053;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+.btn-wsp:hover{
+  text-decoration: none;
+  color: #0df053;
+  background: #fff;
+  width: 70px;
+  height: 70px;
 }
 </style>
