@@ -5,6 +5,7 @@
         <input type="text" v-model="loginForm.nombre_usuario" placeholder="Usuario" />
         <input type="password" v-model="loginForm.contrasena" placeholder="Contrasena" />
         <button @click="loginUser">Iniciar Sesión</button>
+        <button @click="logout">Cerrar Sesión</button>
         <router-link to="/Registrarse" class="button">
             Registrarse
         </router-link>
@@ -34,7 +35,7 @@ export default{
         },
 
         showLoginForm() {
-            this.showRegister = false;
+            this.showRegister = true;
         },
         async registerUser() {
             if (!this.registerForm.nombre_usuario || !this.registerForm.contrasena) {
