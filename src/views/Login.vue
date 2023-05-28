@@ -59,7 +59,7 @@ export default{
             }
 
             try {
-                const response = await axios.get(`http://localhost:3000/usuarios?nombre_usuario=${this.loginForm.nombre_usuario}&contraseña=${this.loginForm.contrasena}`);
+                const response = await axios.get(`http://localhost:3000/usuarios`, this.loggedInUser);
                 const usuarios = response.data;
                 if (usuarios.length === 0) {
                 alert("Credenciales inválidas. Por favor, intente nuevamente.");
